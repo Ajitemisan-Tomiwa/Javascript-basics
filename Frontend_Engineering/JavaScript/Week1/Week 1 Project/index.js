@@ -1,3 +1,34 @@
+const userDatabase = {
+  rising123: {
+    firstName: "rising",
+    lastName: "odegwa",
+    email: "risingidegwa@gmail.com",
+    password: "risingpass12",
+    accountActivated: true,
+  },
+  ade245: {
+    firstName: "Ade",
+    lastName: "Johnson",
+    email: "adejohnson45@gmail.com",
+    password: "adepass307",
+    accountActivated: true,
+  },
+  chike03: {
+    firstName: "chike",
+    lastName: "chukuwa",
+    email: "chike23@gmail.com",
+    password: "chikepass765",
+    accountActivated: true,
+  },
+  Ada90: {
+    firstName: "Adaobi",
+    lastName: "Simon",
+    email: "adasimon76@gmail.com",
+    password: "adapass786",
+    accountActivated: true,
+  },
+};
+
 function displayUserDetails() {
   let userName = prompt("Enter your username");
   // console.log(validateusername(userName));
@@ -42,7 +73,21 @@ function displayUserDetails() {
     confirmPassword = prompt("Passwords do not match: Try again");
   }
 
-  console.log(userName, password, validateConfirmPassword);
+  // check if the user data base contains the username details
+  const user = userDatabase[userName];
+  if (user) {
+    console.log(user);
+  }
+
+  alert(`
+    User found with the following details:
+    FirstName: ${user.firstName}
+    LastName: ${user.lastName}
+    Email: ${user.email}
+    Account: ${user.accountActivated}
+    `);
+  console.log(userName, password, confirmPassword);
+  console.log(user);
   alert("login complete. Goodbye!!");
 }
 
@@ -85,36 +130,6 @@ function validateConfirmPassword(confirmPassword) {
   }
 }
 
-const userDatabase = {
-  rising123: {
-    firstName: "rising",
-    lastName: "odegwa",
-    email: "risingidegwa@gmail.com",
-    password: "risingpass12"
-    accountActivated: true,
-  },
-  ade245: {
-    firstName: "Ade",
-    lastName: "Johnson",
-    email: "adejohnson45@gmail.com",
-    password: "adepass307"
-    accountActivated: true,
-  },
-  chike03: {
-    firstName: "chike",
-    lastName: "chukuwa",
-    email: "chike23@gmail.com",
-    password: "chikepass765"
-    accountActivated: true,
-  },
-  Ada90: {
-    firstName: "Adaobi",
-    lastName: "Simon",
-    email: "adasimon76@gmail.com",
-    password: "adapass786"
-    accountActivated: true,
-  },
-};
 // if (userName == null) {
 //   console.log("no details entered");
 // }
