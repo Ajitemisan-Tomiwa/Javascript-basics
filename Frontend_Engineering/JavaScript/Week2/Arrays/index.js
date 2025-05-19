@@ -71,9 +71,9 @@
 
 // let animals = ["Lion", "Tiger", "Pig"];
 
-// // iterate over the array with for...of
-// for (let animal of animals) {
-//     console.log(`This animal is: ${animal}`)
+// iterate over the array with for...of
+// for (let items of animals) {
+//   console.log(`This animal is: ${items}`);
 // }
 
 // // iterate over the array with for...in
@@ -81,16 +81,28 @@
 //     console.log(`The index is ${index} and the value is ${animals[index]}`)
 // }
 
-// // iterate over the array with forEach
-// function displayEachAnimal(animal) {
-//     console.log(`This animal is: ${animal}`)
+// when iterating over an array with for in loop
+// you do not get the values, you get the index
+// for (items in animals) {
+//   console.log(items);
+//   console.log(animals[items]);
 // }
 
-// animals.forEach(displayEachAnimal)
+// // iterate over the array with forEach
+// first approach
+// let animals = ["Lion", "Tiger", "Pig"];
+// function displayEachAnimal(animals) {
+//   console.log(animals);
+//   console.log(`this animal is: ${animals}`);
+// }
+// animals.forEach(displayEachAnimal);
 
-// animals.forEach((animal) => {
-//     console.log(`This animal is: ${animal}`)
-// })
+// iterate over the array with forEach
+// first approach, cleaner and better
+// let animals = ["Lion", "Tiger", "Pig"];
+// animals.forEach((animals) => {
+//   console.log(animals);
+// });
 
 // // iterate over the array with map
 // let usernames = ["john", "azeez", "ade", "akintude"]
