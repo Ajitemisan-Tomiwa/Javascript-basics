@@ -98,10 +98,10 @@
 // animals.forEach(displayEachAnimal);
 
 // iterate over the array with forEach
-// first approach, cleaner and better
+// second approach, cleaner and better
 // let animals = ["Lion", "Tiger", "Pig"];
-// animals.forEach((animals) => {
-//   console.log(animals);
+// animals.forEach((animal) => {
+//   console.log(animal);
 // });
 
 // // iterate over the array with map
@@ -110,23 +110,32 @@
 //     //do the transformation
 //     const transformedUsername = username.toUpperCase()
 //     return transformedUsername
-
 // })
 
-// console.log(usernameInUppercase)
+// // iterate over an array of names
+// with map
+// let arrayOfNames = ["bola", "ahmed", "khalifa", "iyabo"];
+// let namesToUppercase = arrayOfNames.map((names) => {
+//   let capitalNames = names.toUpperCase();
+//   return capitalNames;
+// });
+
+// console.log(namesToUppercase);
 
 // // iterate over the array with filter
-// let populations = [200, 100, 30, 4, 5, 60]
+// from the name you can use it to filter items from an array
+let populations = [200, 100, 30, 4, 5, 60];
 
-// console.log(`Default population: ${populations}`)
+console.log(`Default population: ${populations}`);
 
-// let populationGreaterThan30 = populations.filter((population) => {
-//     if (population > 30 && population < 200){
-//         return population
-//     }
-// })
+//filter population thats greater than 30
+let populationgreaterthan30 = populations.filter((popula) => {
+  if (popula > 30 && popula < 200) {
+    return popula;
+  }
+});
 
-// console.log(populationGreaterThan30)
+console.log(populationgreaterthan30);
 
 // // 2D Arrays
 // let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
